@@ -32,3 +32,9 @@ skillopt-clone/
 
 # OMC local state
 .omc/
+
+# Generated SkillOpt run configs + materialized workspace (per-run artifacts)
+configs/generic_qa/wire-*.yaml
+configs/generic_qa/ev-*.yaml
+configs/generic_qa/skills/
+configs/generic_qa/datasets/

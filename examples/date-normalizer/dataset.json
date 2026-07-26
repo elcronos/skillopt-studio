@@ -1,0 +1,31 @@
+{
+  "name": "date-normalizer-eval",
+  "split_mode": "ratio",
+  "split_ratio": "5:2:3",
+  "cases": [
+    { "id": "d01", "input": "March 5, 2021",           "ground_truth": "2021-03-05", "metadata": {} },
+    { "id": "d02", "input": "5th March 2021",          "ground_truth": "2021-03-05", "metadata": {} },
+    { "id": "d03", "input": "Mar 5, 2021",             "ground_truth": "2021-03-05", "metadata": {} },
+    { "id": "d04", "input": "2021/03/05",              "ground_truth": "2021-03-05", "metadata": {} },
+    { "id": "d05", "input": "the 5th of March, 2021",  "ground_truth": "2021-03-05", "metadata": {} },
+    { "id": "d06", "input": "December 25, 2019",       "ground_truth": "2019-12-25", "metadata": {} },
+    { "id": "d07", "input": "25 Dec 2019",             "ground_truth": "2019-12-25", "metadata": {} },
+    { "id": "d08", "input": "25th December 2019",      "ground_truth": "2019-12-25", "metadata": {} },
+    { "id": "d09", "input": "2019/12/25",              "ground_truth": "2019-12-25", "metadata": {} },
+    { "id": "d10", "input": "Dec 25 '19",             "ground_truth": "2019-12-25", "metadata": {} },
+    { "id": "d11", "input": "July 4, 2020",            "ground_truth": "2020-07-04", "metadata": {} },
+    { "id": "d12", "input": "4th of July 2020",        "ground_truth": "2020-07-04", "metadata": {} },
+    { "id": "d13", "input": "Jul 4 2020",              "ground_truth": "2020-07-04", "metadata": {} },
+    { "id": "d14", "input": "2020/7/4",                "ground_truth": "2020-07-04", "metadata": {} },
+    { "id": "d15", "input": "January 9, 2023",         "ground_truth": "2023-01-09", "metadata": {} },
+    { "id": "d16", "input": "9 Jan 2023",              "ground_truth": "2023-01-09", "metadata": {} },
+    { "id": "d17", "input": "Jan 9th, 2023",           "ground_truth": "2023-01-09", "metadata": {} },
+    { "id": "d18", "input": "2023/01/09",              "ground_truth": "2023-01-09", "metadata": {} },
+    { "id": "d19", "input": "November 30, 2022",       "ground_truth": "2022-11-30", "metadata": {} },
+    { "id": "d20", "input": "30 Nov 2022",             "ground_truth": "2022-11-30", "metadata": {} },
+    { "id": "d21", "input": "NOVEMBER 30 2022",        "ground_truth": "2022-11-30", "metadata": {} },
+    { "id": "d22", "input": "February 14, 1999",       "ground_truth": "1999-02-14", "metadata": {} },
+    { "id": "d23", "input": "14th Feb 1999",           "ground_truth": "1999-02-14", "metadata": {} },
+    { "id": "d24", "input": "Feb 14 '99",             "ground_truth": "1999-02-14", "metadata": {} }
+  ]
+}

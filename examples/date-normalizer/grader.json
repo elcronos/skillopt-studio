@@ -1,0 +1,5 @@
+{
+  "type": "exact",
+  "threshold": 1.0,
+  "_comment": "Exact-match grader: soft = 1.0 iff the model's output equals ground_truth after trim; hard = int(soft >= threshold). Deterministic + free (no judge model), which is why date-normalizer is the ideal first run. Swap type to 'f1' for partial credit, or 'geval' with a 'criteria' string for open-ended skills (needs the [geval] extra)."
+}

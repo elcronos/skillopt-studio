@@ -54,10 +54,20 @@ one well-tested path. (Adapter implementation is a separate feature package.)
 ## Quickstart
 
 ```bash
-./run.sh
+./run.sh install          # venv + studio + SkillOpt engine + node deps (idempotent)
+./run.sh install --with-geval   # ...plus the DeepEval G-Eval (LLM-judge) grader
+./run.sh doctor           # preflight report: python, venv, SkillOpt, deepeval, node, claude, ports
+./run.sh                  # install (if needed) then launch backend + frontend
 ```
 
-`run.sh` will:
+Or via `make`: `make install` · `make doctor` · `make test` · `make run`.
+
+**New here? Follow [`TUTORIAL.md`](TUTORIAL.md)** — a full self-evolve walkthrough on the
+bundled [`examples/date-normalizer/`](examples/date-normalizer/) skill: base skill →
+generate evals → run N cycles → inspect versions + scores → held-out result → adopt the
+winner. Runs with just a target-model API key (exact grader, no judge).
+
+`run.sh` (default / `install`) will:
 1. Discover a compatible Python (`python3.10`/`3.11`/`3.12`; **never** bare `python3` — the
    host default may be too new). It enforces `>=3.10,<3.14` and fails with a clear message.
 2. Create or reuse `.venv/`.

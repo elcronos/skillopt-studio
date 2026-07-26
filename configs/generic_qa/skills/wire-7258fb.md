@@ -1,1 +1,0 @@
-# demo seed skill body
