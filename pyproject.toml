@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillopt-studio"
+version = "0.1.0"
+description = "Local web studio for optimizing any skill with Microsoft SkillOpt (FastAPI backend + React frontend + Node graph sidecar)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SkillOpt Studio contributors" }]
+keywords = ["skillopt", "skill-optimization", "fastapi", "llm"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+]
+
+# NOTE: SkillOpt itself is NOT a hard dependency here. It is installed separately
+# by run.sh into the SAME venv via a pinned-SHA editable git install:
+#   pip install -e "git+https://github.com/microsoft/SkillOpt@8ebede0efdb69f6b74472fc8ad009f716bb4ca1b#egg=skillopt"
+# Keeping it out of [project.dependencies] avoids resolver coupling to a moving
+# git ref and lets run.sh manage the pin idempotently.
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2",
+    "pyyaml>=6",
+    "httpx>=0.27",
+    "keyring>=24",
+    "sse-starlette>=2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+]
+# G-Eval grader (DeepEval). Optional: the `geval` grader is disabled with a clear
+# message when this extra is not installed; exact/fuzzy/f1 are always available.
+geval = [
+    "deepeval>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/microsoft/SkillOpt"
+"SkillOpt (wrapped, MIT)" = "https://github.com/microsoft/SkillOpt"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["skillopt_studio*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests/backend"]

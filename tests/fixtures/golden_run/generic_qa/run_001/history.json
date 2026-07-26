@@ -1,0 +1,40 @@
+[
+  {
+    "step": 1,
+    "epoch": 1,
+    "action": "accept_new_best",
+    "rollout_hard": 0.3333,
+    "rollout_soft": 0.5,
+    "selection_hard": 0.3333,
+    "selection_soft": 0.5,
+    "gate_metric": "hard",
+    "candidate_gate_score": 0.3333,
+    "current_score": 0.3333,
+    "best_score": 0.3333,
+    "best_step": 1,
+    "skill_len": 142,
+    "n_edits_merged": 3,
+    "n_edits_ranked": 2,
+    "edit_budget": 4,
+    "wall_time_s": 12.4
+  },
+  {
+    "step": 2,
+    "epoch": 1,
+    "action": "accept_new_best",
+    "rollout_hard": 0.6667,
+    "rollout_soft": 0.6667,
+    "selection_hard": 0.6667,
+    "selection_soft": 0.6667,
+    "gate_metric": "hard",
+    "candidate_gate_score": 0.6667,
+    "current_score": 0.6667,
+    "best_score": 0.6667,
+    "best_step": 2,
+    "skill_len": 372,
+    "n_edits_merged": 4,
+    "n_edits_ranked": 3,
+    "edit_budget": 4,
+    "wall_time_s": 13.1
+  }
+]

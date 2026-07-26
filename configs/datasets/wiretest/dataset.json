@@ -1,0 +1,13 @@
+{
+  "name": "wiretest",
+  "split_mode": "ratio",
+  "split_ratio": "2:1:7",
+  "cases": [
+    {
+      "id": "1",
+      "input": "what is the capital of France?",
+      "ground_truth": "a long descriptive free-text answer about Paris being the capital and largest city of France",
+      "metadata": {}
+    }
+  ]
+}

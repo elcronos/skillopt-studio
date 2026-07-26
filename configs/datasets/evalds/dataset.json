@@ -1,0 +1,13 @@
+{
+  "name": "evalds",
+  "split_mode": "ratio",
+  "split_ratio": "2:1:7",
+  "cases": [
+    {
+      "id": "1",
+      "input": "q",
+      "ground_truth": "a",
+      "metadata": {}
+    }
+  ]
+}

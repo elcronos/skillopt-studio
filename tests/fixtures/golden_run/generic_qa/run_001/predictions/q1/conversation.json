@@ -1,0 +1,4 @@
+[
+  {"type": "message", "turn": 1, "content": "The capital of France is Paris. <answer>Paris</answer>"},
+  {"role": "system", "content": "[EVALUATION RESULT]\nQuestion: What is the capital of France?\nPredicted answer: 'Paris'\nGold answers: ['Paris']\nExact Match: 1.0\nF1: 1.0000"}
+]

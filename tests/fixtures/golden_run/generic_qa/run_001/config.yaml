@@ -1,0 +1,43 @@
+# Resolved run config (SYNTHETIC fixture). Mirrors the shape SkillOpt writes to
+# outputs/<env>/<run>/config.yaml after _base_ inheritance + flatten.
+# See SKILLOPT_INTEGRATION.md. This is hand-authored, NOT from a real run.
+model:
+  backend: openai_chat
+  optimizer: gpt-5.5
+  target: gpt-5.5
+  optimizer_backend: openai_chat
+  target_backend: openai_chat
+  reasoning_effort: medium
+train:
+  num_epochs: 1
+  batch_size: 4
+  accumulation: 1
+  seed: 42
+gradient:
+  minibatch_size: 8
+  analyst_workers: 16
+  failure_only: false
+optimizer:
+  learning_rate: 4
+  lr_scheduler: cosine
+  skill_update_mode: patch
+  use_slow_update: false
+  use_meta_skill: false
+evaluation:
+  use_gate: true
+  sel_env_num: 0
+  test_env_num: 0
+  eval_test: true
+env:
+  name: generic_qa
+  skill_init: /tmp/seed_skill.md
+  data_path: /tmp/dataset.json
+  split_mode: ratio
+  split_ratio: "2:1:7"
+  split_seed: 42
+  exec_timeout: 120
+  scoring:
+    type: f1
+    threshold: 0.5
+    answer_parse: answer_tag
+  out_root: outputs/generic_qa/run_001

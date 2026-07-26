@@ -1,0 +1,26 @@
+{
+  "name": "skillopt-studio-graph-sidecar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node sidecar wrapping the SkillForge deterministic skill-graph parser. Reads skill markdown on stdin, writes {mermaid,nodes,edges,crossRefs} JSON on stdout.",
+  "main": "graph-cli.js",
+  "scripts": {
+    "build": "esbuild src/graph-cli.ts --bundle --platform=node --format=cjs --target=node18 --outfile=graph-cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "mdast-util-to-string": "^4.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^20.14.0",
+    "@types/unist": "^3.0.2",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.4"
+  }
+}

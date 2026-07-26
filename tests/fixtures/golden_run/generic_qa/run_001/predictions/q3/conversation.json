@@ -1,0 +1,4 @@
+[
+  {"type": "message", "turn": 1, "content": "Columbus reached the Americas in <answer>1066</answer>"},
+  {"role": "system", "content": "[EVALUATION RESULT]\nQuestion: In what year did Columbus reach the Americas?\nPredicted answer: '1066'\nGold answers: ['1492']\nExact Match: 0.0\nF1: 0.0000"}
+]

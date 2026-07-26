@@ -1,0 +1,8 @@
+{"id": "q1", "hard": 1, "soft": 1.0, "predicted_answer": "Paris", "gold_answer": ["Paris"], "fail_reason": "", "n_turns": 1, "step": 1, "phase": "rollout"}
+{"id": "q2", "hard": 0, "soft": 0.5, "predicted_answer": "the blue whale", "gold_answer": ["blue whale"], "fail_reason": "EM=0: predicted 'the blue whale' but expected ['blue whale']", "n_turns": 1, "step": 1, "phase": "rollout"}
+{"id": "q3", "hard": 0, "soft": 0.0, "predicted_answer": "1066", "gold_answer": ["1492"], "fail_reason": "EM=0: predicted '1066' but expected ['1492']", "n_turns": 1, "step": 1, "phase": "rollout"}
+{"id": "q1", "hard": 1, "soft": 1.0, "predicted_answer": "Paris", "gold_answer": ["Paris"], "fail_reason": "", "n_turns": 1, "step": 2, "phase": "rollout"}
+{"id": "q2", "hard": 1, "soft": 1.0, "predicted_answer": "blue whale", "gold_answer": ["blue whale"], "fail_reason": "", "n_turns": 1, "step": 2, "phase": "rollout"}
+{"id": "q3", "hard": 0, "soft": 0.0, "predicted_answer": "1066", "gold_answer": ["1492"], "fail_reason": "EM=0: predicted '1066' but expected ['1492']", "n_turns": 1, "step": 2, "phase": "rollout"}
+{"score": 0.3333, "hard": 0.3333, "soft": 0.5, "split": "valid_seen", "step": 1, "phase": "selection"}
+{"score": 0.6667, "hard": 0.6667, "soft": 0.6667, "split": "valid_seen", "step": 2, "phase": "selection"}

@@ -1,0 +1,34 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+
+# Secrets (key storage fallbacks — keyring is primary)
+.keys.json
+.secrets/
+.env
+
+# SkillOpt run outputs
+outputs/
+
+# Vendored SkillOpt editable clone (pulled by run.sh into the venv via pip -e git+...).
+# pip stores the editable checkout under .venv/src/skillopt by default; also ignore a
+# top-level vendor dir in case a future run.sh variant clones it explicitly.
+vendor/
+src/skillopt/
+skillopt-clone/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# OMC local state
+.omc/

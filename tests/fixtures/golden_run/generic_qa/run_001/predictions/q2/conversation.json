@@ -1,0 +1,4 @@
+[
+  {"type": "message", "turn": 1, "content": "The largest animal is the blue whale. <answer>the blue whale</answer>"},
+  {"role": "system", "content": "[EVALUATION RESULT]\nQuestion: What is the largest animal?\nPredicted answer: 'the blue whale'\nGold answers: ['blue whale']\nExact Match: 0.0\nF1: 0.5000"}
+]
