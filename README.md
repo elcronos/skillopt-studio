@@ -10,6 +10,26 @@ are surfaced when the run completes.
 > (scanner, graph, dataset, grading, runner, frontend) are built incrementally and the
 > backend imports their routers defensively so the server boots before they exist.
 
+## Screenshots
+
+**Skills** — discover skills across claude / codex / openai / cwd providers and inspect
+their structure graph before sending one to the optimizer.
+
+![Skills view — provider index and structure-graph inspector](docs/images/skills.jpg)
+
+**Train** — a 5-step pipeline (seed skill → dataset → grader → model → launch) configures a
+`generic_qa` run end-to-end.
+
+![Train wizard — pick the seed skill that gets optimized](docs/images/train.jpg)
+
+**Grader** — score each rollout with `exact`, `fuzzy`, `f1`, `llm_judge`, `geval` (DeepEval),
+or a sandboxed `custom_python` scorer, with a soft→hard threshold.
+
+![Grader step — six grader types and the soft-to-hard threshold](docs/images/grader.jpg)
+
+> New here? [`TUTORIAL.md`](TUTORIAL.md) walks the full self-evolve loop on the bundled
+> [`examples/date-normalizer/`](examples/date-normalizer/) skill.
+
 ## Architecture
 
 ```
